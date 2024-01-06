@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </section>
         <section id="page2" className="p-[10vw] h-[100vh] md:h-max">
-          <p className="md:invisible text-3xl font-[poppins] font-thin leading-normal">Hey there! I'm Dev, a frontend developer
+          <p className="md:invisible text-3xl font-[poppins] font-thin leading-normal">Hey there! I&apos;m Dev, a frontend developer
 passionate about crafting beautiful, user-centric
 experiences. Dive into my world of pixels and
 code, where creativity and functionality merge 
@@ -87,9 +87,9 @@ seamlessly. Let's build something extraordinary together!</p>
             className="relative text-left font-[poppins] text-white/50 invisible md:visible text-5xl leading-normal"
           >
             <div className="relative">
-              <span>Hey there! I'm Dev, a frontend developer</span>
+              <span>Hey there! I&apos;m Dev, a frontend developer</span>
               <span className="invisible md:visible md:absolute sec left-0 top-0 text-nowrap overflow-hidden">
-                Hey there! I'm Dev, a frontend developer
+                Hey there! I&apos;m Dev, a frontend developer
               </span>
             </div>
             <div className="relative">
@@ -113,10 +113,10 @@ seamlessly. Let's build something extraordinary together!</p>
             </div>
             <div className="relative">
               <span>
-                seamlessly. Let's build something extraordinary together!
+                seamlessly. Let&apos;s build something extraordinary together!
               </span>
               <span className="invisible md:visible md:absolute sec left-0 top-0 text-nowrap overflow-hidden">
-                seamlessly. Let's build something extraordinary <br /> together!
+                seamlessly. Let&apos;s build something extraordinary <br /> together!
               </span>
             </div>
           </div>
@@ -126,7 +126,7 @@ seamlessly. Let's build something extraordinary together!</p>
           className="h-max w-full pt-[10vw] px-[10vw]"
         >
           <h1 className="text-7xl font-[poppins]">
-            Things i'm <span className="text-yellow-400">good</span> at
+            Things i&apos;m <span className="text-yellow-400">good</span> at
           </h1>
           <div className="w-full flex flex-wrap gap-5 text-8xl justify-between mt-[10vh] skills">
             <Image src={"/html.svg"} height={100} width={100} alt="" />
