@@ -81,7 +81,7 @@ export default function Home() {
 passionate about crafting beautiful, user-centric
 experiences. Dive into my world of pixels and
 code, where creativity and functionality merge 
-seamlessly. Let's build something extraordinary together!</p>
+seamlessly. Let&apos;s build something extraordinary together!</p>
           <div
             id="text"
             className="relative text-left font-[poppins] text-white/50 invisible md:visible text-5xl leading-normal"
