@@ -16,10 +16,10 @@ const Navbar = () => {
     <button  className={`text-4xl z-10  ${showNavbar && 'text-black' || 'text-white'}`} onClick={handleShowNavbar}>
       <HiOutlineMenuAlt4 />
     </button>
-  <div id="navlinks" className={`w-[50vw] text-4xl pl-10 lg:text-6xl lg:pl-[100px] shadow-lg h-screen flex flex-col items-start justify-center gap-10 fixed  z-[2] bg-white text-black  ${showNavbar && 'active' || 'notactive'}`}>
-    <Link className="" href={"/"}>Home</Link>
-    <Link className="" href={"/"}>Projects</Link>
-    <Link className="" href={"/"}>Contact</Link>
+  <div id="navlinks" className={`w-[50vw] text-4xl pl-10 lg:text-6xl lg:pl-[100px] shadow-lg h-screen flex flex-col items-start justify-center gap-10 fixed  z-[2] bg-white text-black  ${showNavbar && 'activenav' || 'notactivenav'}`}>
+    <Link className="" href="/">Home</Link>
+    <Link className="" href="">Projects</Link>
+    <Link className="" href="">Contact</Link>
   </div>
   </nav>
   )

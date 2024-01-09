@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 #page1 img{
@@ -14,12 +15,12 @@
   object-fit: cover;
 }
 
-.active{
+.activenav{
   top:0;
   right:0;
   transition: all 0.2s ease;
 }
-.notactive{
+.notactivenav{
   top:0;
   right:-100%;
   transition: all 1s ease;
@@ -28,4 +29,44 @@
 .sec{
   color: white;
   width: 0;
+}
+
+.skills img{
+  height: 60px;
+  width: 60px;
+}
+#page4>.websites>img{
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .skills img{
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.good{
+  text-shadow: 2px 2px 100px rgb(255, 229, 125);
+}
+
+.works{
+  column-fill: balance;
+  break-before: avoid;
+  column-gap: 3vw;
+}
+.works img{
+  margin-bottom: 3vw;
+}
+
+#skill{
+  color: rgb(255, 242, 0) !important;
+}
+
+#page5 a{
+  letter-spacing:3px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 10px;
+  text-decoration-color: rgb(0, 208, 255);
 }
