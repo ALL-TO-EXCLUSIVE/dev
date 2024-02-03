@@ -1,0 +1,9 @@
+#projectsCol{
+    padding: 0 10vw 10vw 10vw;
+    column-fill: balance;
+    column-gap: 2vw;
+}
+#projectsCol img{
+    position: relative;
+    margin-bottom: 2vw;
+}

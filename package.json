@@ -12,12 +12,11 @@
     "@gsap/react": "^2.0.2",
     "@studio-freight/react-lenis": "^0.0.40",
     "gsap": "^3.12.4",
-    "mouse-follower": "^1.1.2",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
-    "sass": "^1.69.7"
+    "smoothscroll-for-websites": "^1.4.10"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,5 +1,4 @@
 "use client";
-import Smoothscroll from "@/components/smoothScroll";
 import Image from "next/image";
 
 import gsap from "gsap";
@@ -14,23 +13,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   useGSAP(() => {
+    const starter = document.querySelector('.starter')
     const paragraphs = document.querySelectorAll(".skills p");
     const skills = document.querySelector(".skills");
-    paragraphs.forEach((paragraph) => {
-      const bgWFull = paragraph.previousElementSibling;
 
-      paragraph.addEventListener("mouseenter", () => {
-        gsap.to(bgWFull, { duration: 0.3, width: "100%" });
-        gsap.to(paragraph, { color: "black" });
-      });
+    var tl = gsap.timeline()
 
-      paragraph.addEventListener("mouseleave", () => {
-        gsap.to(bgWFull, { duration: 0.3, width: "0%" });
-        gsap.to(paragraph, { color: "white" });
-      });
-    });
-
-    gsap.from("#page1 img", {
+    tl.from(".myname",{
+      y:300,
+      duration:0.5
+    }).to(".myname",{
+      fontWeight:800,
+      duration:1
+    }).to(starter,{
+      opacity:0,
+      top:"-100%",
+      display:"none",
+      duration:0.5
+    })
+    .from("#page1 img", {
       scale: 0,
       opacity: 0,
       y: 500,
@@ -47,6 +48,22 @@ export default function Home() {
         scrub: 1,
       },
     });
+
+    paragraphs.forEach((paragraph) => {
+      const bgWFull = paragraph.previousElementSibling;
+
+      paragraph.addEventListener("mouseenter", () => {
+        gsap.to(bgWFull, { duration: 0.3, width: "100%" });
+        gsap.to(paragraph, { color: "black" });
+      });
+
+      paragraph.addEventListener("mouseleave", () => {
+        gsap.to(bgWFull, { duration: 0.3, width: "0%" });
+        gsap.to(paragraph, { color: "white" });
+      });
+    });
+
+
 
     return () => {
       paragraphs.forEach((paragraph) => {
@@ -66,8 +83,10 @@ export default function Home() {
   });
 
   return (
-    <Smoothscroll>
       <main className="h-full w-[100%] bg-black text-white overflow-hidden">
+        <div className="starter h-screen w-full bg-black flex items-center justify-center fixed top-0 left-0 z-50">
+          <div className="overflow-hidden"><h1 className="text-[20vw] myname ">Dev Patel</h1></div>
+        </div>
         <Navbar />
         <section
           id="page1"
@@ -269,28 +288,28 @@ export default function Home() {
               Talk.
             </span>
           </h1>
-          <div id="text" className="flex flex-col gap-10 mt-[5vw]">
+          <div id="text" className="flex flex-col gap-10 mt-[5vw] pb-[10vh]">
             <Link
-              className="text-5xl flex gap-5 items-center text-center"
+              className="text-3xl md:text-5xl flex gap-5 items-center text-center"
               href={"mailto: alltoexclusive@gmail.com"}
             >
-              Contact by email
-              <span className="text-6xl text-center rounded-full border-2 border-white hover:bg-white hover:text-black transition-all">
+              Email
+              <span className="text-3xl md:text-6xl text-center rounded-full border-2 border-white hover:bg-white hover:text-black transition-all">
                 <IoIosArrowRoundForward />
               </span>
             </Link>
             <Link
-              className="text-5xl flex gap-5 items-center text-center"
+              className="text-3xl md:text-5xl flex gap-5 items-center text-center"
               href={"https://instagram.com/alltoexclusive"}
             >
-              DM me in instagram
-              <span className="text-6xl text-center rounded-full border-2 border-white hover:bg-white hover:text-black transition-all">
+              Instagram
+              <span className="text-3xl md:text-6xl text-center rounded-full border-2 border-white hover:bg-white hover:text-black transition-all">
                 <IoIosArrowRoundForward />
               </span>
             </Link>
           </div>
         </section>
       </main>
-    </Smoothscroll>
+
   );
 }
